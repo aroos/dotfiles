@@ -7,6 +7,29 @@ set -e
 SHELL='/bin/bash'
 export SHELL
 
+if [[ $(xcode-select --version) ]]; then
+  echo Xcode command tools already installed
+else
+  echo "Installing Xcode commandline tools"
+  $(xcode-select --install)
+fi
+
+if [[ $(omz help) ]] ; then
+    echo "Attempting to update Oh My ZSH"
+    omz update
+else
+    echo "Attempting to install Oh My ZSH"
+    sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+fi
+
+if [[ $(brew --version) ]] ; then
+    echo "Attempting to update Homebrew from version $(brew --version)"
+    brew update
+else
+    echo "Attempting to install Homebrew"
+    /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+fi
+
 # Standard dotbot pre-configuration:
 
 readonly DOTBOT_DIR='dotbot'
@@ -28,14 +51,8 @@ run_dotbot () {
   "$BASEDIR/$DOTBOT_DIR/$DOTBOT_BIN" \
     -d "$BASEDIR" \
     --plugin-dir dotbot-brewfile \
-    --plugin-dir dotbot-pip \
     -c "$config" $ARGS
 }
 
 run_dotbot 'steps/terminal.yml' || true
-if [ "$CODESPACES" = true ]; then
-  run_dotbot 'steps/codespaces.yml' || true
-else
-  run_dotbot 'steps/dependencies.yml' || true
-fi
-run_dotbot 'steps/vscode.yml' || true
+run_dotbot 'steps/dependencies.yml' || true

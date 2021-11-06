@@ -19,18 +19,6 @@ export PKG_CONFIG_PATH="/usr/local/opt/openssl/lib/pkgconfig"
 
 # These lines should be the first ones!
 
-# GPG agent:
-PATH="/usr/local/opt/gpg-agent/bin:$PATH"
-
-# Adds `pipsi` and `pipx` binary files:
-PATH="$HOME/.local/bin:$PATH"
-
-# Adds `poetry` binary, should be added to the end:
-PATH="$HOME/.poetry/bin:$PATH"
-
-# postgres@9.6 utilities like `psql`:
-PATH="/usr/local/opt/postgresql@9.6/bin:$PATH"
-
 # npm:
 PATH="/usr/local/share/npm/bin:$PATH"
 
@@ -41,14 +29,7 @@ PATH="/usr/local/share/npm/bin:$PATH"
 # === General ===
 
 # Editor:
-export EDITOR=$(which nano)
-
-# GPG:
-export GPG_TTY=$(tty)
-eval "$(gpg-agent --daemon --allow-preset-passphrase > /dev/null 2>&1)"
-
-# Make Python use UTF-8 encoding for output to stdin, stdout, and stderr.
-export PYTHONIOENCODING='UTF-8'
+export EDITOR=$(which vi)
 
 # Homebrew:
 export HOMEBREW_NO_ANALYTICS=1  # disables statistics that brew collects

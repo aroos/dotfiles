@@ -1,6 +1,5 @@
 ---
-
-- clean: ['~']
+- clean: ["~"]
 
 - link:
     # Terminal:
@@ -17,15 +16,16 @@
     ~/.hushlogin: config/hushlogin
     ~/.inputrc: config/inputrc
     ~/.zplugrc: config/zplugrc
-    ~/.hyper.js: config/hyper.js
+
+    ~/.p10k.zsh: config/p10k.zsh
 
     # Git:
     ~/.gitconfig: config/gitconfig
     ~/.gitignore_global: config/gitignore
     ~/.gitattributes_global: config/gitattributes
+    ~/.gitaliases: config/gitaliases
 
     # Tools:
-    ~/.psqlrc: config/psqlrc
     ~/.sqliterc: config/sqliterc
 
     # Editors:
@@ -35,11 +35,5 @@
     # SSH:
     ~/.ssh/config:
       path: config/ssh_config
-      force: true
-      create: true
-
-    # GPG:
-    ~/.gnupg/gpg-agent.conf:
-      path: config/gpgagent
       force: true
       create: true
