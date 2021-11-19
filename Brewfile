@@ -51,7 +51,8 @@ cask "paragon-ntfs"
 cask "postman"
 cask "telegram"
 cask "beekeeper-studio"
-cask "brewservicesmenubar"
+cask "balenaetcher"
+cask "onedrive"
 
 # Fonts
 cask "font-fira-code"
