@@ -1,0 +1,29 @@
+#!/bin/zsh
+
+# Props to https://gist.github.com/kaleksandrov/3cfee92845a403da995e7e44ba771183 from whom I took the code inside
+# the conditional.
+
+THIS_SCRIPT_INVOCATION=$0
+
+# The return status of this function will be 0 if globalprotect is running, 1 if not running because grep returns 0
+# if it finds a match and 1 if not.
+# We basically grep for globalprotect but exclude all the matches we don't want
+ps-grep () {
+        ps auwwwwx | grep -i globalprotect | grep -v "$THIS_SCRIPT_INVOCATION" | grep -v 'grep ' | grep -v "%CPU" > /dev/null
+}
+
+ps-grep
+IS_RUNNING=$?
+
+if [ "$IS_RUNNING" -eq "0" ]
+then
+    echo "Stopping GlobalProtect..."
+    launchctl remove com.paloaltonetworks.gp.pangps
+    launchctl remove com.paloaltonetworks.gp.pangpa
+    echo "Done!"
+else
+    echo "Starting GlobalProtect..."
+    launchctl load /Library/LaunchAgents/com.paloaltonetworks.gp.pangpa.plist
+    launchctl load /Library/LaunchAgents/com.paloaltonetworks.gp.pangps.plist
+    echo "Done!"
+fi
