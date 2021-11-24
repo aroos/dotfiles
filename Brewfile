@@ -54,6 +54,7 @@ cask "postman"
 cask "beekeeper-studio"
 cask "balenaetcher"
 cask "onedrive"
+cask "docker"
 
 # Fonts
 cask "font-fira-code"
