@@ -56,6 +56,7 @@ cask "balenaetcher"
 cask "onedrive"
 cask "docker"
 cask "vivaldi"
+cask "fork"
 
 # Fonts
 cask "font-fira-code"
