@@ -55,6 +55,7 @@ cask "beekeeper-studio"
 cask "balenaetcher"
 cask "onedrive"
 cask "docker"
+cask "vivaldi"
 
 # Fonts
 cask "font-fira-code"
