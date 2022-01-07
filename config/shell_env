@@ -6,7 +6,7 @@
 
 # === Plugin management ===
 
-ZPLUG_HOME='/usr/local/opt/zplug'
+ZPLUG_HOME='/opt/homebrew/opt/zplug'
 
 export ZPLUG_HOME
 source "$HOME/.zplugrc"
