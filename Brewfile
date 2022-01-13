@@ -21,6 +21,7 @@ brew "mas"
 brew "trash"
 
 # Development
+brew "git-delta"
 brew "diff-so-fancy"
 brew "go"
 brew "node"
@@ -57,6 +58,7 @@ cask "balenaetcher"
 cask "docker"
 cask "vivaldi"
 cask "fork"
+cask "signal"
 
 # Fonts
 cask "font-fira-code"
