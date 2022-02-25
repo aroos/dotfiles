@@ -8,6 +8,7 @@ tap "homebrew/services"
 # Binaries
 brew "bash"
 brew "zsh"
+brew "zplug"
 brew "gh"
 brew "awscli"
 brew "aws-cdk"
