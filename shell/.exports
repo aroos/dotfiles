@@ -9,22 +9,16 @@
 
 # This is required because `openssl` is keg-only in `brew`,
 # see: `brew info openssl` for more information.
-export LDFLAGS="-L/usr/local/opt/openssl/lib"
-export CPPFLAGS="-I/usr/local/opt/openssl/include"
+export LDFLAGS="-L/opt/homebrew/opt/openssl@3/lib"
+export CPPFLAGS="-I/opt/homebrew/opt/openssl@3/include"
 export CFLAGS="-I$(xcrun --show-sdk-path)/usr/include"
-export PKG_CONFIG_PATH="/usr/local/opt/openssl/lib/pkgconfig"
-
+export PKG_CONFIG_PATH="/opt/homebrew/opt/openssl@3/lib/pkgconfig"
 
 # === Path modifications ===
 
 # These lines should be the first ones!
 
-# npm:
-PATH="/usr/local/share/npm/bin:$PATH"
-
-# python2 (required by npm and other tools, installed via pyenv):
-# PATH="$PATH:$HOME/.pyenv/versions/2.7.17/bin"
-
+export PATH="/opt/homebrew/opt/openssl@3/bin:$PATH"
 
 # === General ===
 
@@ -58,7 +52,7 @@ export MANPAGER='less'
 # eval "$(pyenv init --path)"
 
 # rbenv:
-eval "$(rbenv init -)"
+# eval "$(rbenv init -)"
 
 # rustup:
 # source "$HOME/.cargo/env"

@@ -11,6 +11,9 @@ ZPLUG_HOME='/opt/homebrew/opt/zplug'
 export ZPLUG_HOME
 source "$HOME/.zplugrc"
 
+# === RVM ===
+
+source "$HOME/.rvm/scripts/rvm"
 
 # === Shell parts ===
 
