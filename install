@@ -35,6 +35,9 @@ else
     /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 fi
 
+# Install / Upgrade RVM
+curl -sSL https://get.rvm.io | bash -s stable
+
 # Standard dotbot pre-configuration:
 
 readonly DOTBOT_DIR='dotbot'
