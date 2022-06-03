@@ -39,6 +39,7 @@ brew "typescript"
 brew "hyperkit"
 brew "k3d"
 brew "openssl"
+brew "devspace"
 
 # Apps
 cask "temurin"
