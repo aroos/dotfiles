@@ -40,6 +40,7 @@ brew "hyperkit"
 brew "k3d"
 brew "openssl"
 brew "devspace"
+brew "tilt"
 
 # Apps
 cask "temurin"
