@@ -41,6 +41,8 @@ brew "k3d"
 brew "openssl"
 brew "devspace"
 brew "tilt"
+brew "bat"
+brew "pnpm"
 
 # Apps
 cask "temurin"
