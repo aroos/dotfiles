@@ -60,3 +60,12 @@ source "$ZSH/oh-my-zsh.sh"
 export PATH="$PATH:$HOME/.rvm/bin"
 export PATH="/opt/homebrew/opt/openssl@3/bin:$PATH"
 export PATH="/opt/homebrew/sbin:$PATH"
+
+
+export NODE_OPTIONS="--no-experimental-require-module"
+export DOTNET_ROOT="/opt/homebrew/opt/dotnet/libexec"
+
+if [ -d "/opt/homebrew/opt/ruby/bin" ]; then
+  export PATH=/opt/homebrew/opt/ruby/bin:$PATH
+  export PATH=`gem environment gemdir`/bin:$PATH
+fi

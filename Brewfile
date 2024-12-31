@@ -52,6 +52,7 @@ cask "beekeeper-studio"
 cask "balenaetcher"
 cask "docker"
 cask "arc"
+cask "moom"
 
 # Fonts
 cask "font-fira-code"
@@ -59,5 +60,3 @@ cask "font-menlo-for-powerline"
 cask "font-lato"
 cask "font-meslo-lg-nerd-font"
 
-# Mac App Store
-mas "Moom", id: 419330170
